@@ -1,0 +1,127 @@
+#landingpage{
+    .lpArticles{
+        &__mainText{
+            .par--small{
+                color: $black;
+                margin: 24px auto 0;
+                max-width: 85%;
+            }
+        }
+
+        &__wrapper{
+            @include flex;
+            justify-content: center;
+            align-items: stretch;
+            overflow: hidden;
+            margin-top: 30px;
+        }
+
+        .pb60{
+            padding-bottom: 60px;
+        }
+
+        .articleBox{
+            width: calc(25% - 20px);
+            border-radius: 4px;
+            overflow: hidden;
+            background: $white;
+            box-shadow: 0 1px 4px rgba($color: $black, $alpha: .15);
+            margin: 10px;
+
+            &:hover{
+                box-shadow: 0 1px 8px rgba($color: $black, $alpha: .3);
+                background: #f4f5f5;
+    
+                .articleBox__bottom{
+                    background: #f4f5f5;
+                }
+    
+                .articleBox__bottom--name{
+                    color: $media;
+                    text-decoration: underline;
+                }
+            }
+
+            &__imageWrapper{
+                width: 100%;
+                padding-top: 50%;
+                position: relative;
+                z-index: 4;
+                overflow: hidden;
+        
+                &--image{
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    max-width: 100%;
+                    max-height: 100%;
+                    min-width: 100%;
+                    min-height: 100%;
+                    transform: translate(-50%,-50%);
+                    object-fit: cover;
+                }
+        
+                &--type{
+                    position: absolute;
+                    z-index: 5;
+                    left: 15px;
+                    bottom: 15px;
+                    background: $media;
+                    color: $white;
+                    font-size: 12px;
+                    font-weight: 500;
+                    padding: 0 15px;
+                    border-radius: 4px;
+                    height: 24px;
+                    line-height: 24px;
+                }
+            }
+        
+            &__bottom{
+                background: $white;
+                box-sizing: border-box;
+                padding: 15px;
+                text-align: left;
+                
+                &--name{
+                    font-size: 14px;
+                    font-weight: 500;
+                    color: #535252;
+                    line-height: 24px;
+                }
+            }
+        }
+
+        .btn{
+            margin-top: 32px;
+        }
+    }
+}
+
+// media
+@media only screen and (max-width: 980px){
+    .mobile #landingpage,
+    .mobileapp #landingpage{
+        .lpArticles .articleBox{
+            width: 280px;
+        }
+    }
+}
+
+@media only screen and (max-width: 700px){
+    .mobile #landingpage,
+    .mobileapp #landingpage{
+        .lpArticles .articleBox{
+            width: calc(50% - 20px);
+        }
+    }
+}
+
+@media only screen and (max-width: 450px){
+    .mobile #landingpage,
+    .mobileapp #landingpage{
+        .lpArticles .articleBox{
+            width: 100%;
+        }
+    }
+}

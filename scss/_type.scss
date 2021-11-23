@@ -1,0 +1,83 @@
+#landingpage{
+    .notMoveH1,
+    .hdl1s,
+    .hdl2,
+    .hdl3{
+        font-weight: 700;
+        @include roboto;
+        display: block;
+        color: $black;
+    }
+    
+    .notMoveH1{
+        font-size: 50px;
+        line-height: 58px;
+    }
+
+    .hdl1s{
+        font-size: 40px;
+        line-height: 52px;
+    }
+    
+    .hdl2{
+        font-size: 30px;
+        line-height: 42px;
+    }
+        
+    .hdl3{
+        font-size: 20px;
+        line-height: 28px;
+    }
+    
+    p,
+    span,
+    a,
+    li,
+    .par,
+    .par-sm,
+    .par-min{
+        display: block;
+        font-weight: 400;
+        @include roboto;
+        font-size: 16px;
+        line-height: 1.5;
+        color: $white;
+    }
+    
+    .par-sm,
+    .par-sm--link{
+        font-size: 14px;
+        line-height: 24px;
+    }
+    
+    .par-min,
+    .par-min--link{
+        font-size: 12px;
+        line-height: 21px;
+    }
+    
+    .par,
+    .par-sm,
+    .par-min{
+        &--link{
+            display: block;
+            font-weight: 400;
+            @include roboto;
+            text-decoration: underline;
+            color: $media;
+            transition: .3s ease-in-out;
+    
+            &:hover{
+                color: darken($color: $media, $amount: 6%);
+            }
+        }
+    }
+
+    strong{
+        font-weight: 700;
+    }
+    
+    a{
+        text-decoration: none
+    }
+}

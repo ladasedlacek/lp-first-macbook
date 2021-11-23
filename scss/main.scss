@@ -1,0 +1,20 @@
+// primary colors
+$primary: #76B900;
+$secondary: #f3f3f3;
+$white: #fff ;
+$black: #000;
+
+// files
+@import "reset";
+@import "mixins";
+@import "alza";
+@import "settings";
+@import "features";
+@import "type";
+
+// layout
+@import "layout/header";
+
+
+// components
+@import "components/articles";

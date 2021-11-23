@@ -1,0 +1,60 @@
+#landingpage{
+    .lpHeader{
+        background: url('https://cdn.alza.cz/Foto/or/lp/nvidia30/build/img/header.png') center no-repeat;
+        background-size: cover;
+        min-height: 500px;
+
+        &__textWrapper{
+            text-align: left;
+            max-width: 45%;
+            padding-bottom: 56px;
+
+            &--logo{
+                padding-top: 40px;
+            }
+
+            .notMoveH1{
+                margin-top: 64px;
+                color: $white;
+
+                sup{
+                    vertical-align: super;
+                    font-size: 16px;
+                }
+            }
+
+            .par{
+                margin-top: 24px;
+                color: #C6C6C6;
+            }
+        }
+    }
+}
+
+// layout 0
+.layout-0 #landingpage .lpHeader{
+    &__textWrapper{
+        max-width: 55%;
+    }
+}
+
+// mobile
+@media only screen and (max-width: 700px){
+    .mobile #landingpage,
+    .mobileapp #landingpage{
+        .lpHeader{
+            &__textWrapper{
+                max-width: 90%;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 550px){
+    .mobile #landingpage,
+    .mobileapp #landingpage{
+        .lpHeader{
+            background-position-x: 60%;
+        }
+    }
+}
