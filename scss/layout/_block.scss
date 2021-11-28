@@ -25,9 +25,11 @@
             }
         }
 
+        // head of block content
         &__headWrapper{
             @include flex;
             justify-content: space-between;
+            align-items: flex-start;
         }
 
         &__textWrapper{
@@ -52,6 +54,20 @@
 
             &--image{
                 margin: 0 auto;
+            }
+        }
+
+        // buttons wrapper
+        &__buttonsWrapper{
+            display: flex;
+            margin-top: 8px;
+
+            .btn{
+                margin: 24px 20px 0 0;
+
+                &:last-of-type{
+                    margin-right: 0;
+                }
             }
         }
 
