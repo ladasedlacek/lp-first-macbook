@@ -2,7 +2,8 @@
     .notMoveH1,
     .hdl1s,
     .hdl2,
-    .hdl3{
+    .hdl3,
+    .subHdl{
         font-weight: 700;
         @include roboto;
         display: block;
@@ -27,6 +28,13 @@
     .hdl3{
         font-size: 20px;
         line-height: 28px;
+        font-weight: 500;
+    }
+
+    .subHdl{
+        font-size: 20px;
+        line-height: 24px;
+        font-weight: 400;
     }
     
     p,
@@ -73,11 +81,27 @@
         }
     }
 
+    .par-sm--link,
+    .par-min--link{
+        display: inline-block;
+    }
+
     strong{
         font-weight: 700;
     }
     
     a{
         text-decoration: none
+    }
+}
+
+// media
+@media only screen and (max-width: 750px){
+    .mobile #landingpage,
+    .mobileapp #landingpage{
+        .notMoveH1{
+            font-size: 40px;
+            line-height: 48px;
+        }
     }
 }

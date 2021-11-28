@@ -1,0 +1,33 @@
+#landingpage{
+    .lpContent{
+        text-align: left;
+        padding: 56px 0 0;
+
+        &:first-of-type{
+            padding-top: 0;
+        }
+
+        .lpContainer{
+            text-align: left;
+
+            .hdl3{
+                color: $media;
+            }
+
+            .par{
+                font-weight: 500;
+                color: $dark;
+                margin-top: 32px;
+            }
+
+            .par-sm{
+                color: $dark;
+                margin-top: 24px;
+
+                strong{
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}

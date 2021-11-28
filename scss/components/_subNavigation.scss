@@ -1,0 +1,32 @@
+#landingpage{
+    .lpSubNav{
+        &__wrapper{
+            @include flex;
+            justify-content: flex-start;
+            align-items: stretch;
+        }
+
+        &--link{
+            color: $dark;
+            font-weight: 500;
+            font-size: 14px;
+            padding: 6px 15px;
+            border-radius: 100px;
+            border: 1px solid #E8E8E8;
+            background-color: $white;
+            margin-right: 6px;
+            transition: .2s ease-in-out;
+            margin-bottom: 8px;
+
+            &:hover{
+                background-color: $media;
+                color: $white;
+                border: 1px solid $media;
+            }
+
+            &:last-of-type{
+                margin-right: 0;
+            }
+        }
+    }
+}

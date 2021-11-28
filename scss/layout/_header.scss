@@ -1,60 +1,50 @@
 #landingpage{
     .lpHeader{
-        background: url('https://cdn.alza.cz/Foto/or/lp/nvidia30/build/img/header.png') center no-repeat;
-        background-size: cover;
+        background: $black;
         min-height: 500px;
-
-        &__textWrapper{
-            text-align: left;
-            max-width: 45%;
-            padding-bottom: 56px;
-
-            &--logo{
-                padding-top: 40px;
-            }
-
-            .notMoveH1{
-                margin-top: 64px;
-                color: $white;
-
-                sup{
-                    vertical-align: super;
-                    font-size: 16px;
-                }
-            }
-
-            .par{
-                margin-top: 24px;
-                color: #C6C6C6;
-            }
+        position: relative;
+        padding: 48px 0 0;
+        overflow: hidden;
+        
+        // shine
+        &--shineTop,
+        &--shineBottom{
+            width: 960px;
+            height: 100px;
+            background: url('https://cdn.alza.cz/Foto/or/lp/prvniMac/build/img/shine.svg') center no-repeat;
+            background-size: cover;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            height: 480px;
         }
-    }
-}
 
-// layout 0
-.layout-0 #landingpage .lpHeader{
-    &__textWrapper{
-        max-width: 55%;
-    }
-}
-
-// mobile
-@media only screen and (max-width: 700px){
-    .mobile #landingpage,
-    .mobileapp #landingpage{
-        .lpHeader{
-            &__textWrapper{
-                max-width: 90%;
-            }
+        &--shineTop{
+            top: 15%;
         }
-    }
-}
 
-@media only screen and (max-width: 550px){
-    .mobile #landingpage,
-    .mobileapp #landingpage{
-        .lpHeader{
-            background-position-x: 60%;
+        &--shineBottom{
+            top: 65%;
+            height: 285px;
+            background: url('https://cdn.alza.cz/Foto/or/lp/prvniMac/build/img/shine2.svg') center no-repeat;
+            width: 1310px;
+            z-index: 0;
+        }
+
+        .notMoveH1{
+            color: $white;
+            margin-top: 40px;
+        }
+
+        .subHdl{
+            color: $white;
+            margin-top: 40px;
+        }
+
+        &--product{
+            position: relative;
+            z-index: 3;
+            margin: 24px auto 0;
         }
     }
 }

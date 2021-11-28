@@ -1,0 +1,45 @@
+#landingpage{
+    .linksWrapper{
+        text-align: left;
+        margin-top: 20px;
+        counter-reset: numbCounter;
+
+        &--link{
+            position: relative;
+            padding-left: 32px;
+            padding-bottom: 4px;
+            border-bottom: 1px solid #F4F5F5;
+            margin-top: 10px;
+            color: $dark;
+            font-size: 14px;
+            line-height: 24px;
+            display: block;
+            counter-increment: numbCounter;
+
+            &:first-of-type{
+                margin-top: 0;
+            }
+
+            &:last-of-type{
+                border-bottom: none;
+            }
+
+            &::before{
+                content: counter(numbCounter);
+                position: absolute;
+                width: 24px;
+                height: 24px;
+                background-color: $media;
+                left: 0;
+                top: 1px;
+                border-radius: 100px;
+                text-align: center;
+                line-height: 24px;
+                color: $white;
+                @include roboto;
+                font-size: 14px;
+                font-weight: 500;
+            }
+        }
+    }
+}

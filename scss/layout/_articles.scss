@@ -1,23 +1,13 @@
 #landingpage{
     .lpArticles{
-        &__mainText{
-            .par--small{
-                color: $black;
-                margin: 24px auto 0;
-                max-width: 85%;
-            }
-        }
-
+        margin-top: 80px;
+        
         &__wrapper{
             @include flex;
             justify-content: center;
             align-items: stretch;
             overflow: hidden;
-            margin-top: 30px;
-        }
-
-        .pb60{
-            padding-bottom: 60px;
+            margin-top: 14px;
         }
 
         .articleBox{

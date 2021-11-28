@@ -1,0 +1,38 @@
+#landingpage{
+    .checkItems{
+        text-align: left;
+        margin-top: 24px;
+
+        &--item{
+            position: relative;
+            padding-left: 40px;
+            margin-top: 8px;
+            color: $dark;
+            font-size: 14px;
+            line-height: 24px;
+            display: table;
+
+            &:first-of-type{
+                margin-top: 0;
+            }
+
+            &::before{
+                content: '';
+                position: absolute;
+                width: 20px;
+                height: 20px;
+                background: url('https://cdn.alza.cz/Foto/or/lp/prvniMac/build/img/circle-check.svg') center no-repeat;
+                background-size: cover;
+                left: 0;
+                top: 2px;
+            }
+        }
+    }
+
+    .checkPositive{
+        .checkItems--item::before{
+            background: url('https://cdn.alza.cz/Foto/or/lp/prvniMac/build/img/circle-plus.svg') center no-repeat;
+            background-size: cover;
+        }
+    }
+}

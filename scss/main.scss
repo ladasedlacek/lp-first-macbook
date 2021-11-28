@@ -3,6 +3,8 @@ $primary: #76B900;
 $secondary: #f3f3f3;
 $white: #fff ;
 $black: #000;
+$dark: #212121;
+$light: #F8F8F8;
 
 // files
 @import "reset";
@@ -14,7 +16,26 @@ $black: #000;
 
 // layout
 @import "layout/header";
+@import "layout/mainWrapper";
+@import "layout/block";
+@import "layout/navigation";
+@import "layout/content";
+@import "layout/tiles";
+@import "layout/carousel";
+@import "layout/articles";
+@import "layout/footer";
 
 
 // components
-@import "components/articles";
+@import "components/splitText";
+@import "components/subNavigation";
+@import "components/infoBanner";
+@import "components/checkItems";
+@import "components/imageBoard";
+@import "components/grayBox";
+@import "components/contentBoxes";
+@import "components/links";
+
+
+
+

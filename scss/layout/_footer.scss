@@ -1,0 +1,60 @@
+// footer
+#landingpage{
+    .lpFooter{
+        background: $black;
+        overflow: hidden;
+        position: relative;
+    
+        &--shineTop{
+            width: 960px;
+            height: 100px;
+            background: url('https://cdn.alza.cz/Foto/or/lp/prvniMac/build/img/shine.svg') center no-repeat;
+            background-size: cover;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            height: 480px;
+            top: 35%;
+        }
+
+        &--product{
+            position: absolute;
+            z-index: 3;
+            margin: 24px auto 0;
+            left: 50%;
+            bottom: 0;
+            transform: translate(-50%, 70%);
+        }
+    
+        .lp-container{
+            text-align: center;
+            position: relative;
+            z-index: 10;
+    
+            .hdl2{
+                padding-top: 90px;
+                color: $white;
+            }
+    
+            .par{
+                margin-top: 30px;
+                color: $white;
+            }
+        }
+    }
+}
+
+// alza
+#articlePage #landingpage #newSocialContainer{
+    padding: 48px 0 150px;
+}
+
+// mobile
+@media only screen and (max-width: 980px){
+    .mobile #landingpage,
+    .mobileapp #landingpage{
+        .lpFooter{
+            display: none;
+        }
+    }
+}

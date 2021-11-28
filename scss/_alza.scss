@@ -38,7 +38,7 @@ $alza-colors: (
 }
 
 #landingpage .btn{
-    display: inline-block;
+    display: table;
     padding: 0 24px;
     border-radius: 4px;
     position: relative;
@@ -49,13 +49,25 @@ $alza-colors: (
     @include height(40);
     transition: .3s ease-in-out;
 
+    .btn-text{
+        line-height: 40px;
+    }
+
     &--small{
         @include height(30);
+
+        .btn-text{
+            line-height: 30px;
+        }
     }
 
     &--big{
         @include height(60);
         padding: 0 32px;
+
+        .btn-text{
+            line-height: 60px;
+        }
     }
 
     &--dis{

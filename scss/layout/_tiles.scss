@@ -1,0 +1,123 @@
+#landingpage{
+    .sectionTiles{
+        &__wrapper{
+            margin-top: 14px;
+            @include flex;
+            align-items: stretch;
+        }
+
+        // category tiles
+        .categoryTile{
+            border-radius: 4px;
+            box-shadow: 0 1px 4px rgba($color: $black, $alpha: .15);
+            text-align: left;
+            padding: 10px 10px 10px 20px; 
+            margin: 10px;
+            @include flex;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            align-items: center;
+            width: calc(33.33333% - 20px);
+            transition: .1s ease-in-out;
+            position: relative;
+            background-color: $white;
+            text-decoration: none;
+            box-sizing: border-box;
+
+            &:hover{
+                box-shadow: 0 2px 6px rgba($color: $black, $alpha: .15);
+                cursor: pointer;
+
+                .categoryTile__left--name{
+                    color: $media;
+                }
+
+                .categoryTile__right--icon{
+                    path,
+                    use{
+                        fill: $media;
+                    }
+                }
+            }
+
+            &__left{
+                @include flex;
+                flex-wrap: wrap;
+                justify-content: flex-start;
+                align-items: center;
+                flex: 9;
+        
+                figure{
+                    width: 40px;
+                    height: 40px;
+                    margin: 0;
+                    flex: 40px;
+
+                    svg{
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+        
+                &--image{
+                    max-width: 100%;
+                    max-height: 100%;
+                    margin: 0 auto;
+                }
+        
+                &--name{
+                    font-size: 16px;
+                    font-weight: 500;
+                    @include roboto;
+                    color: $black;
+                    transition: .3s ease-in-out;
+                    display: inline-block;
+                    margin: 10px 10px 10px 20px;
+                    line-height: 1.5;
+                    flex: inherit;
+                }
+            }
+        
+            &__right{
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                flex: 1;
+
+                &--icon{
+                    width: 20px;
+                    height: 20px;
+        
+                    path,
+                    use{
+                        fill: $black;
+                        transition: .3s ease-in-out;
+                    }
+                }
+            }
+        }
+    }
+
+    .sectionTiles.lpBlock{
+        margin-top: 80px;
+    }
+}
+
+// media
+@media only screen and (max-width: 780px){
+    .mobile #landingpage,
+    .mobileapp #landingpage{
+        .categoryTile{
+            width: calc(50% - 20px);
+        }
+    }
+}
+
+@media only screen and (max-width: 500px){
+    .mobile #landingpage,
+    .mobileapp #landingpage{
+        .categoryTile{
+            width: 100%;
+        }
+    }
+}

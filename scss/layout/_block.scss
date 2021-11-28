@@ -1,0 +1,113 @@
+#landingpage{
+    .lpBlock{
+        margin-top: 80px;
+
+        &:first-of-type{
+            margin-top: 0;
+        }
+
+        .lpContainer{
+            text-align: left;
+
+            .hdl2{
+                text-align: left;
+                color: $dark;
+            }
+
+            .hdl3{
+                text-align: left;
+                color: $media;
+            }
+
+            .par-sm{
+                margin-top: 24px;
+                color: $dark;
+            }
+        }
+
+        &__headWrapper{
+            @include flex;
+            justify-content: space-between;
+        }
+
+        &__textWrapper{
+            width: calc(50% - 10px);
+            order: 1;
+
+            .hdl3{
+                margin-top: 24px;
+            }
+        }
+
+        &__imageWrapper{
+            width: calc(50% - 10px);
+            order: 2;
+
+            figure{
+                background-color: $white;
+                border-radius: 4px;
+                box-shadow: 0 1px 4px rgba($color: $black, $alpha: .15);
+                padding: 10px;
+            }
+
+            &--image{
+                margin: 0 auto;
+            }
+        }
+
+        &__wrapper{
+            margin-top: 24px;
+            @include flex;
+            justify-content: space-between;
+
+            figure{
+                width: calc(50% - 10px);
+                background-color: $white;
+                border-radius: 4px;
+                box-shadow: 0 1px 4px rgba($color: $black, $alpha: .15);
+                padding: 10px;
+            }
+
+            &--image{
+                border-radius: 4px;
+            }
+        }
+    }
+}
+
+// media
+@media only screen and (max-width: 750px){
+    .mobile #landingpage,
+    .mobileapp #landingpage{
+        .lpBlock{
+            &__textWrapper{
+                width: 100%;
+                order: 1;
+            }
+    
+            &__imageWrapper{
+                width: 100%;
+                order: 2;
+                margin-top: 32px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 600px){
+    .mobile #landingpage,
+    .mobileapp #landingpage{
+        .lpBlock__wrapper{
+            display: block;
+
+            figure{
+                width: auto;
+                margin-top: 20px;
+
+                &:first-of-type{
+                    margin-top: 0;
+                }
+            }
+        }
+    }
+}
