@@ -27,6 +27,13 @@ $(document).ready(function () {
     $("#landingpage .lpMain").removeClass('mainActive');
     $("#landingpage .lpMainNav__wrapper").find("[data-tab='".concat(saveTarget, "']")).addClass('tabActive');
     $("#landingpage #" + saveTarget).addClass('mainActive');
+  }), // table switcher
+  $("#landingpage .lpTableNav__wrapper--tile").on("click", function () {
+    var saveTarget = $(this).attr('data-table');
+    $("#landingpage .lpTableNav__wrapper--tile").removeClass('tileActive');
+    $(this).addClass('tileActive');
+    $("#landingpage .lpTable__wrapper").removeClass('tableOpen');
+    $("#landingpage .lpTable #" + saveTarget).addClass('tableOpen');
   }), // smooth scroller
   $('#landingpage a[href*="#"]').not('[href="#"]').not('[href="#0"]').click(function (a) {
     var o;

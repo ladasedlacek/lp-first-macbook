@@ -28,6 +28,15 @@ $(document).ready(function() {
         $("#landingpage #" + saveTarget).addClass('mainActive')
     }),
 
+    // table switcher
+    $("#landingpage .lpTableNav__wrapper--tile").on("click", function() {
+        let saveTarget = $(this).attr('data-table')
+        $("#landingpage .lpTableNav__wrapper--tile").removeClass('tileActive')
+        $(this).addClass('tileActive')
+        $("#landingpage .lpTable__wrapper").removeClass('tableOpen')
+        $("#landingpage .lpTable #" + saveTarget).addClass('tableOpen')
+    }),
+
     // smooth scroller
     $('#landingpage a[href*="#"]')
     .not('[href="#"]')

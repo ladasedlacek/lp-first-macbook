@@ -1,0 +1,24 @@
+$color-gray-text: #A4A4A4;
+$color-gray-outline: #E0E0E0;
+
+#landingpage{
+    .lpConditions{
+        margin: 40px auto 0;
+
+        &__wrapper{
+            text-align: center;
+            border: 1px solid $color-gray-outline;
+            padding: 20px 32px;
+            border-radius: 4px;
+        }
+
+        .par-min{
+            color: $color-gray-text;
+            margin-top: 10px;
+
+            &:first-of-type{
+                margin-top: 0;
+            }
+        }
+    }
+}
