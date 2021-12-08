@@ -1,3 +1,89 @@
 #landingpage{
-    
+    .lpProducts{
+        margin-top: 30px;
+
+        &__box{
+            border-radius: 4px;
+            box-shadow: 0 1px 4px rgba($color: $black, $alpha: .15);
+            padding: 10px 20px 32px;
+            margin: 10px;
+            width: calc(33.333% - 20px);
+            transition: .3s ease-in-out;
+
+            &:hover{
+                box-shadow: 0 2px 6px rgba($color: $black, $alpha: .3);
+            }
+
+            figure{
+                margin: 0 auto;
+                width: 154px;
+                height: 154px;
+                @include flex;
+                align-content: center;
+                align-items: center;
+            }
+
+            &--name{
+                color: $dark;
+                margin-top: 10px;
+                text-align: center;
+                font-weight: 500;
+            }
+
+            &--text{
+                margin-top: 16px !important;
+                text-align: center;
+                color: #A4A4A4;
+            }
+
+            .btn{
+                margin: 32px auto 0;
+            }
+        }
+
+        &__price-wrapper{
+            margin-top: 20px;
+        }
+
+        &__price-line{
+            @include flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-top: 4px;
+
+            &:first-of-type{
+                margin-top: 0;
+            }
+
+            &--name.par-sm{
+                color: $dark;
+                margin-top: 0 !important;
+            }
+
+            &--price.par-sm{
+                color: $red !important;
+                font-weight: 700;
+                margin-top: 0 !important;
+            }
+        }
+    }
+}
+
+// media
+@media only screen and (max-width: 900px){
+    .mobile #landingpage,
+    .mobileapp #landingpage{
+        .lpProducts__box{
+            width: calc(50% - 20px);
+        }
+    }
+}
+
+@media only screen and (max-width: 650px){
+    .mobile #landingpage,
+    .mobileapp #landingpage{
+        .lpProducts__box{
+            width: 100%;
+        }
+    }
 }

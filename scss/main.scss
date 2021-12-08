@@ -5,6 +5,7 @@ $white: #fff ;
 $black: #000;
 $dark: #212121;
 $light: #F8F8F8;
+$red: #E9242E;
 
 // files
 @import "reset";
@@ -18,6 +19,7 @@ $light: #F8F8F8;
 @import "layout/header";
 @import "layout/mainWrapper";
 @import "layout/block";
+@import "layout/table";
 @import "layout/navigation";
 @import "layout/content";
 @import "layout/tiles";
@@ -27,12 +29,10 @@ $light: #F8F8F8;
 
 
 // components
-@import "components/table";
+@import "components/tableNav";
 @import "components/products";
 @import "components/conditions";
-@import "components/infoBanner";
 @import "components/checkItems";
-/* @import "components/imageAnotation"; */
 @import "components/contentBoxes";
 @import "components/links";
 
